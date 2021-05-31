@@ -36,14 +36,21 @@ main p {
    
     font-size: 1.2rem;
 }
-.button {
+#start-button {
     background-color: var(--violet);
     color: var(--light);
     font-size: 1.2rem;
+}
+li {
+    list-style: none;
 }
 li button{
     color: var(--light);
     background-color: var(--violet);
     display: flex;
     
+    
 }   
+.hidden {
+    display: none;
+}
