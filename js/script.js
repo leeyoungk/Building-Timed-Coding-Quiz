@@ -1,6 +1,7 @@
 // set element by class
 var timeEl = document.querySelector("#timerSeconds");
-var startQuiz = document.querySelector(".button")
+var startQuiz = document.querySelector("#start-button");
+var submitNameEl = document.querySelector("#submitName");
 var listOfQuestions = [
     {
         questions: "Commonly used data types DO NOT include:",
@@ -31,6 +32,7 @@ var listOfQuestions = [
 
 // Set time left = 75 seconds 
 var secondsLeft = 75;
+var index = 0;
 
 
 // created a function to run variable secondLeft
@@ -50,12 +52,17 @@ function timeLeft() {
     }, 1000);
 
 }
+// created an eventlistener to start the game when button is clicked.
 startQuiz.addEventListener("click", function() {
     
     timeLeft();
     
 
 });
+function submitInitials (event) {
+    event.preventDefault();
+    console.log(event);
 
-
+}
+submitNameEl.addEventListener("click",submitInitials);
 
