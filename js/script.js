@@ -59,9 +59,9 @@ function timeLeft() {
 }
 // created an eventlistener to start the game when button is clicked.
 startQuiz.addEventListener("click", function() {
-    var questionContainer = listOfQuestions[index].question;
+    var questionContainer = listOfQuestions[0].question;
     sectionQuestionsEl.textContent = questionContainer;
-    var choicesContainer = listOfQuestions[index].choices;
+    var choicesContainer = listOfQuestions[0].choices;
     
     for (let index = 0; index < choicesContainer.length; index++) {
        var choiceButton = document.createElement("button");
@@ -73,6 +73,7 @@ startQuiz.addEventListener("click", function() {
        listChoice.appendChild(choiceButton);
        
        sectionQuestionsEl.appendChild(listChoice);
+      
        
 
     }
@@ -80,11 +81,12 @@ startQuiz.addEventListener("click", function() {
     function answerClick (event) {
         
         console.log(event.target.innerHTML);
-        if (event.target.innerHTML === listOfQuestions[0].correctAnswer) {
-            console.log("correct");
+        if (event.target.innerHTML !== listOfQuestions[0].correctAnswer) {
+           secondsLeft -= 10;
+            console.log("wrong");
 
         }else {
-            console.log("wrong");
+            console.log("Correct");
         }
         
 
@@ -100,6 +102,7 @@ function submitInitials (event) {
     console.log(event);
     var response = " thankyou" + enterNameEl;
     submissionResponseEl.textcontent = response;
+
 
 }
 submitButtonEl.addEventListener("click",submitInitials);
