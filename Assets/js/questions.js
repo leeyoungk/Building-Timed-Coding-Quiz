@@ -1,150 +1,67 @@
-// var questions = [
-//     {
-//         question: "Commonly used data types DO NOT include:",
-//         correctAnswer: "C.Alerts",
-//         choices: ["A.Strings","B.Booleans","C.Alerts","D.Numbers"]
-//     },
 
-//     {
-//         question: "The condition in an if/else statment is enclosed within___.",
-//         correctAnswer: "C.Parentheses",
-//         choices: ["A.Quotes","B.Curly brackets","C.Parentheses","D.Square brackets"]
-//     },
-//     {
-//         question: "Arrays in JavaScript can be used to store___.",
-//         correctAnswer: "D.All of the above",
-//         choices: ["A.Numbers and strings","B.Other arrays","C.Booleans","D.All of the above"]
-//     },
-//     {
-//         question: "String values must be enclosed within___when being assigned to variables",
-//         correctAnswer: "C.Quotes",
-//         choices: ["A.Comma","B.Curly brackets","C.Quotes","D.Parentheses"]
-//     }
-
-
-
-
-// ];
-
- var questions = [
+var questions = [
 	{
-		question: 'Which is the correct form to output a message to the dev tools?',
-		correct: 'console.log()',
-		choices: [
-			'console.log()',
-			'log.console()',
-			'displayContent()',
-			'showMeWhatThisIs()'
-		]
-	},
+        question: "Commonly used data types DO NOT include:",
+        correct: "Alerts",
+        choices: ["Strings","Booleans","Alerts","Numbers"]
+    },
 	{
-		question: 'What element do we use to embed JavaScript into our HTML?',
-		correct: '<script>',
-		choices: [
-			'<script>',
-			'<header>',
-			'<link>',
-			'<javascript>'
-		]
-	},
+        question: "The condition in an if/else statment is enclosed within___.",
+        correct: "Parentheses",
+        choices: ["Quotes","Curly brackets","Parentheses","Square brackets"]
+    },
 	{
-		question: 'Which primitive data type returns a true or false value?',
-		correct: 'boolean',
-		choices: [
-			'boolean',
-			'string',
-			'number',
-			'ifElse'
-		]
-	},
+        question: "Arrays in JavaScript can be used to store___.",
+        correct: "All of the above",
+        choices: ["Numbers and strings","Other arrays","Booleans","All of the above"]
+    },
 	{
-		question: 'To assign a value to a variable which operator should we use?',
-		correct: '=',
-		choices: [
-			'=',
-			'==',
-			'===',
-			'equals'
-		]
-	},
+        question: "String values must be enclosed within___when being assigned to variables",
+        correct: "Quotes",
+        choices: ["Comma","Curly brackets","Quotes","Parentheses"]
+    },
+
 	{
-		question: 'To compare if two values are equal in value and data type which operator should we use?',
-		correct: '===',
-		choices: [
-			'===',
-			'==',
-			'=',
-			'equals'
-		]
+		question: '"What is computer science?',
+		correct: 'Study of computers',
+		choices: ["web design","Study of computers","pro gamer","game designer"]
 	},
 	{
 		question: 'Which set of parentheses are used to declare or store values in an array?',
 		correct: '[ ] Square',
-		choices: [
-			'[ ] Square',
-			'( ) Round',
-			'{ } Curly',
-			'< > Angle'
+		choices: ['[ ] Square','( ) Round','{ } Curly','< > Angle'
 		]
 	},
 	{
-		question: 'Which of the following is NOT an expression used to define the parameters of a \'for\' loop?',
-		correct: 'Functional',
-		choices: [
-			'Functional',
-			'Declarative',
-			'Conditional',
-			'Incremental'
-		]
+		question: 'What does HTML stand for ?',
+		correct: 'Stands for hypertext markup language',
+		choices: ["Means laptop not working", "Stands for hypertext markup language", "Hyper Trace ", "Computer science keywords"]
 	},
 	{
-		question: 'When we want to _____ a declared function we put () after the name.',
+		question: 'When we want to ___ a declared function we put () after the name.',
 		correct: 'Call',
-		choices: [
-			'Call',
-			'Reference',
-			'Summon',
-			'Trigger'
-		]
+		choices: ['Call','Recall','Push','Move']
 	},
 	{
-		question: 'If we want a variable to be accessible to any part of our code we declare it _____.',
+
+		
+		question: 'If we want to use a variable _____ , we need to declare it on top of ScriptJs.',
 		correct: 'Globally',
-		choices: [
-			'Globally',
-			'Universally',
-			'Locally',
-			'Openly'
-		]
+		choices: ['Globally','Private','repeatedly ','multpiple times']
 	},
 	{
-		question: 'Which keyword is NOT used to declare a variable?',
-		correct: 'store',
-		choices: [
-			'store',
-			'var',
-			'let',
-			'const'
-		]
+		question: 'what "words" you can not use to declare a varaible?',
+		correct: "go",
+		choices: ['go','var','let','const']
 	},
 	{
-		question: 'What property of an array returns how many items are stored in it?',
-		correct: '.length',
-		choices: [
-			'.length',
-			'.count',
-			'.sum',
-			'.total'
-		]
+		question: 'What are multipule connected computer called ?',
+		correct: 'nextwork',
+		choices: ['friendzone','network','group','table']
 	},
 	{
-		question: 'The value of _____ is determined by where it is used and always refers to an object.',
-		correct: 'this',
-		choices: [
-			'this',
-			'that',
-			'here',
-			'aforementioned'
-		]
+		question: 'what definition below is not correct for link tag ?',
+		correct: "connect two computers together ",
+		choices: ["connect two computers together ","the relationship between the current document and an external resource"," often used to link to external style sheets or to add a favicon to your website"," element is an empty element, it contains attributes only"]
 	}
 ];

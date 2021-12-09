@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Quiz!</title>
+    <title>Code Quiz</title>
 
     <!-- Stylesheet Links -->
     <link rel="stylesheet" href="./Assets/css/normalize.css">
     <link rel="stylesheet" href="./Assets/css/style.css">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Quicksand:wght@300;400&family=Readex+Pro:wght@200&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -26,11 +26,11 @@
         </div>
     </header>
 
-    <main class="contentBlock">
+    <main class="mainPage">
 
         <!-- The start screen of the game with instruction on gameplay -->
         <section id="startScreen">
-            <h1>JavaScript Coding Quiz Challenge</h1>
+            <h1>Coding Quiz Challenge</h1>
             <p>Try to answer the following JavaScript-related questions within the time limit. Wrong answers will
                 penalize your score/time by ten seconds! Good Luck!</p>
             <div class="centerContent">
@@ -38,7 +38,7 @@
             </div>
         </section>
 
-        <div class="leftAlignment">
+        <div class="mainScreen">
 
             <!-- Questions are loaded into structure -->
             <section class="hidden" id="questionScreen">
@@ -50,8 +50,8 @@
             </section>
 
             <!-- Game finished score with intials submission form -->
-            <section class="hidden" id="finishScreen">
-                <h1>Finished!</h1>
+            <section class="hidden" id="finishedScreen">
+                <h1>Completed!</h1>
                 <p>Your final score is <span id="answeredCorrectScore">10</span> correct answers with <span
                         id="finalScoreTime">0</span> seconds remaining.</p>
                 <form id="initalsForm">

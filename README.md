@@ -16,7 +16,8 @@ I created a lick eventlistener that when the button is clicked, the time would s
 
 ## Usage
 This is how the page would look like.
-![Code Quiz](https://user-images.githubusercontent.com/82126894/120589888-722b3880-c3ee-11eb-96c6-48fac7245201.png)
+![JavaScript Quiz!](https://user-images.githubusercontent.com/82126894/145356350-37ee9c94-b433-423e-9419-2c5bcc03a6c6.png)
+
 
 ## Credits
 credits to my instructor and my tutor helped me out alot during this project. 

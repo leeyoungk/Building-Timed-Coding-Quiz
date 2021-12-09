@@ -1,3 +1,4 @@
+/* Global Attributes and Variables */
 * {
   font-family: 'Lato', sans-serif;
 }
@@ -15,39 +16,38 @@
 
 /* Element Styles */
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 h2 {
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 450;
   font-style: italic;
-  color: var(--correctWrong);
-  border-top: 2px solid var(--correctWrong);
+  color: gray;
   flex: 0 1 800px;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 a {
   text-decoration: none;
-  color: var(--buttonColor);
+  color: green;
 }
 
 p,
 label,
 li {
-  font-size: 1.2rem;
+  font-size: 2rem;
   margin: 0;
   list-style: none;
 }
 
 li {
-  padding: 2px;
-  padding-left: 4px;
+  padding: 3px;
+  padding-left: 6px;
 }
 
 ul {
-  padding: 0;
+  
   margin: 30px 0;
 }
 
@@ -55,11 +55,11 @@ ul {
 
 /* Alternating highscores list colors */
 li:nth-child(odd) {
-  background-color: var(--listColorOne);
+  background-color: whitesmoke;
 }
 
 li:nth-child(even) {
-  background-color: var(--listColorTwo);
+  background-color: white;
 }
 
 /* --------------------------------------------------------------- */
@@ -69,9 +69,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  font-size: 1.2rem;
-  padding: 0;
-  margin: 10px;
+  font-size: 1.5rem;
+  margin: 20px;
   margin-bottom: 80px;
 }
 
@@ -79,23 +78,19 @@ header p {
   text-align: right;
 }
 
-/* --------------------------------------------------------------- */
-
-/* Content Block Styles */
-.contentBlock {
+.mainPage {
   margin: auto;
   width: 800px;
 }
 
-.contentBlock h1,
-.contentBlock p {
+.mainPage h1,
+.mainPage p {
   text-align: center;
   margin-bottom: 30px;
 }
 
-/* --------------------------------------------------------------- */
 
-/* Button Styles */
+
 button,
 #submitInitialsButton {
   border: none;
@@ -103,26 +98,22 @@ button,
   padding: 3px 10px;
   margin: 0 auto;
   margin-bottom: 5px;
-  background-color: var(--buttonColor);
-  color: var(--lightText);
+  background-color: yellowgreen;
+  color:black;
   position: relative;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
-button:hover,
-#submitInitialsButton:hover {
-  background-color: var(--buttonColorHover);
-}
 
-/* --------------------------------------------------------------- */
+
 
 /* Tweaking Styles */
-.leftAlignment h1,
-.leftAlignment p {
+.mainScreen h1,
+.mainScreen p {
   text-align: left;
 }
 
-.leftAlignment button {
+.mainScreen button {
   display: block;
   margin-left: 10px;
 }
@@ -164,29 +155,3 @@ button:hover,
   opacity: 5%;
 }
 
-/* --------------------------------------------------------------- */
-
-/* Media Queries */
-@media screen and (max-width: 860px) {
-  .contentBlock {
-    width: 93%;
-  }
-}
-
-@media screen and (max-width: 499px) {
-  h1,
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  p,
-  label,
-  li {
-    font-size: 1rem;
-  }
-
-  button:hover,
-  #submitInitialsButton:hover {
-    background-color: var(--buttonColor);
-  }
-}
