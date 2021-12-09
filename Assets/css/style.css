@@ -1,0 +1,192 @@
+* {
+  font-family: 'Lato', sans-serif;
+}
+
+:root {
+  --buttonColor: #bd5e06;
+  --buttonColorHover: #db8a3e;
+  --listColorOne: #ffe7d1;
+  --listColorTwo: #fcf4ed;
+  --lightText: white;
+  --correctWrong: #bbb;
+}
+
+/* --------------------------------------------------------------- */
+
+/* Element Styles */
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--correctWrong);
+  border-top: 2px solid var(--correctWrong);
+  flex: 0 1 800px;
+  padding-top: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--buttonColor);
+}
+
+p,
+label,
+li {
+  font-size: 1.2rem;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  padding: 2px;
+  padding-left: 4px;
+}
+
+ul {
+  padding: 0;
+  margin: 30px 0;
+}
+
+/* --------------------------------------------------------------- */
+
+/* Alternating highscores list colors */
+li:nth-child(odd) {
+  background-color: var(--listColorOne);
+}
+
+li:nth-child(even) {
+  background-color: var(--listColorTwo);
+}
+
+/* --------------------------------------------------------------- */
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 1.2rem;
+  padding: 0;
+  margin: 10px;
+  margin-bottom: 80px;
+}
+
+header p {
+  text-align: right;
+}
+
+/* --------------------------------------------------------------- */
+
+/* Content Block Styles */
+.contentBlock {
+  margin: auto;
+  width: 800px;
+}
+
+.contentBlock h1,
+.contentBlock p {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* --------------------------------------------------------------- */
+
+/* Button Styles */
+button,
+#submitInitialsButton {
+  border: none;
+  border-radius: 5px;
+  padding: 3px 10px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  background-color: var(--buttonColor);
+  color: var(--lightText);
+  position: relative;
+  font-size: 1.2rem;
+}
+
+button:hover,
+#submitInitialsButton:hover {
+  background-color: var(--buttonColorHover);
+}
+
+/* --------------------------------------------------------------- */
+
+/* Tweaking Styles */
+.leftAlignment h1,
+.leftAlignment p {
+  text-align: left;
+}
+
+.leftAlignment button {
+  display: block;
+  margin-left: 10px;
+}
+
+.highscoresBlock h1 {
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+
+.highscoresBlock button {
+  display: inline;
+}
+
+.centerContent {
+  display: flex;
+  justify-content: center;
+}
+
+/* Applied in JS to alter game state */
+.hidden {
+  display: none;
+}
+
+/* --------------------------------------------------------------- */
+
+/* Question Countdown Background */
+#questionScreen {
+  position: relative;
+}
+
+#questionCountDown {
+  position: absolute;
+  font-size: 15rem;
+  margin: 0;
+  padding: 0;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%);
+  opacity: 5%;
+}
+
+/* --------------------------------------------------------------- */
+
+/* Media Queries */
+@media screen and (max-width: 860px) {
+  .contentBlock {
+    width: 93%;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  h1,
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p,
+  label,
+  li {
+    font-size: 1rem;
+  }
+
+  button:hover,
+  #submitInitialsButton:hover {
+    background-color: var(--buttonColor);
+  }
+}

@@ -1,6 +1,6 @@
 # Building-Timed-Coding-Quiz
 
-Deployed Application: https://leeyoungk.github.io/Building-Timed-Coding-Quiz/
+Deployed Application: https://leeyoungk.github.io/Building-Timed-Coding-Quiz/https://leeyoungk.github.io/Building-Timed-Coding-Quiz/
 ## Description
 
 This project is creating a web application that would ask user list of questions and user would pick a correct answer from given answers. There is a time limited to answer the questions and every time an incorrect answer is picked, a certain amount of time will be subtract from the giving time. This is an interesting project but also required alot of researchs and testing the codes. Through out the project, i learnt how to start out with a pseudo code and break into smaller tasks from it. Although i didnt complete the project yet, but i will countiue working on it to finish the project.

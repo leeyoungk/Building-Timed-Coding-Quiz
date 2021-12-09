@@ -1,93 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>|
+<head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Quiz </title>
-    <link rel="stylesheet" href=".\css\highscores.css">
-    <link rel="stylesheet" href=".\css\style.css">
-    
+    <title>JavaScript Quiz!</title>
+
+    <!-- Stylesheet Links -->
+    <link rel="stylesheet" href="./Assets/css/normalize.css">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
 </head>
-      
-<Body>
-<header>
-    <nav>
-        <a href=".\html\highscores.html">View Highscores</a>
-    
-    </nav>
-    <h1 class="time">Time:<span id="timerSeconds">75</span></h1>
-    
-</header>
-<Main>
-    <div class="game-section">
-        <h2>Coding Quiz Challenge</h2>
 
-        <p> Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by 10 seconds!</p>
-        <button id="start-button">Start Quiz</button>
-    </div>  
-    <div class="question-section">
-        <!-- created sections to contain questions and answers -->
-        <!-- <section>
-            <h3>Commonly used data types DO NOT include:</h3>
-            <ul>
-                <li><button>A.Strings</button></li>
-                <li><button>B.Booleans</button></li>
-                <li><button>C.Alerts</button></li>
-                <li><button>D.Numbers</button></li>
-            </ul>
+<body>
+    <!-- Header with link to highscores, the game's timer, and correct answer totals -->
+    <header>
+        <a href="./Assets/html/highscores.html">View Highscores</a>
+        <div>
+            <p>Correct: <span id="correctAnswers">0</span></p>
+            <p>Time: <span id="timerValue">120</span></p>
+        </div>
+    </header>
+
+    <main class="contentBlock">
+
+        <!-- The start screen of the game with instruction on gameplay -->
+        <section id="startScreen">
+            <h1>JavaScript Coding Quiz Challenge</h1>
+            <p>Try to answer the following JavaScript-related questions within the time limit. Wrong answers will
+                penalize your score/time by ten seconds! Good Luck!</p>
+            <div class="centerContent">
+                <button id="startQuizButton">Start Quiz</button>
+            </div>
         </section>
-        <section>
-            <h3>The condition in an if/else statment is enclosed within___.</h3>
-            <ul>
-                <li><button>A.Quotes</button></li>
-                <li><button>B.Curly brackets</button></li>
-                <li><button>C.Parentheses</button></li>
-                <li><button>D.Square brackets</button></li>
-            </ul>
-        </section>
-        <section>
-            <h3>Arrays in JavaScript can be used to store___.</h3>
-            <ul>
-                <li><button>A.Numbers and strings</button></li>
-                <li><button>B.Other arrays</button></li>
-                <li><button>C.Booleans</button></li>
-                <li><button>D.All of the above</button></li>
-            </ul>
-        </section>
-        <section>
-            <h3>String values must be enclosed within___when being assigned to variables</h3>
-            <ul>
-                <li><button>A.Comma</button></li>
-                <li><button>B.Curly brackets</button></li>
-                <li><button>C.Quotes</button></li>
-                <li><button>D.Parentheses</button></li>
-            </ul>
-        </section> -->
-        <!-- <section>
-            <h3>All done!</h3>
-            <h4>Your final score is </h4>
-            <input placeholder="AB" id="enterName" ></input>
-            <button id="submitButton">Submit</button>
-            <h5 id="response"></h5>
-        </section> --> -->
 
-    </div>    
+        <div class="leftAlignment">
 
-</Main>
+            <!-- Questions are loaded into structure -->
+            <section class="hidden" id="questionScreen">
+                <h3 id="questionCountDown">12</h3>
+                <h1 id="theQuestion">The question will appear here:</h1>
+                <div id="buttonContainer">
+                    <!-- Answer buttons are generated in JS and appended here -->
+                </div>
+            </section>
 
+            <!-- Game finished score with intials submission form -->
+            <section class="hidden" id="finishScreen">
+                <h1>Finished!</h1>
+                <p>Your final score is <span id="answeredCorrectScore">10</span> correct answers with <span
+                        id="finalScoreTime">0</span> seconds remaining.</p>
+                <form id="initalsForm">
+                    <label>Enter initials:</label>
+                    <input type="text" id="initials">
+                    <input type="submit" id="submitInitialsButton" value="Submit">
+                </form>
+            </section>
 
+            <!-- Response to answer choice -->
+            <h2 class="correct hidden">Correct!</h2>
+            <h2 class="wrong hidden">Wrong!</h2>
+        </div>
+    </main>
 
-
-
-
-
-<script src= ".\js\script.js"></script>
-<script src=".\js\highscore.js"></script>
-</Body>
-
-
-
-
+    <!-- JavaScript links -->
+    <script src="./Assets/js/questions.js"></script>
+    <script src="./Assets/js/script.js"></script>
+</body>
 
 </html>
