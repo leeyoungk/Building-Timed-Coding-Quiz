@@ -2,10 +2,9 @@
 var highscoresListEl = document.querySelector( '#highscoresList' );
 var clearScoresBtn = document.querySelector( '#clearHighscoresButton' );
 
-var saveHighscores = JSON.parse( localStorage.getItem( 'saveHighscores' ) ) || [];
+var storedHighscores = JSON.parse( localStorage.getItem( 'storedHighscores' ) ) || [];
 
-// Sort the objects by correct answers and time remaining values
-saveHighscores.sort( function( a, b ) {
+storedHighscores.sort( function( a, b ) {
 	var answerA = a.answerScore;
 	var timeA = a.timeScore;
 	var answerB = b.answerScore;
@@ -14,14 +13,12 @@ saveHighscores.sort( function( a, b ) {
 	return ( answerA < answerB ? 1 : ( answerA > answerB ? -1 : ( answerA === answerB ? ( timeA < timeB ? 1 : ( timeA > timeB ? -1 : 0 ) ) : null ) ) );
 } );
 
-// Load list to page
-for( var i = 0; i < saveHighscores.length; i++ ) {
+for( var i = 0; i < storedHighscores.length; i++ ) {
 	var li = document.createElement( 'li' );
-	li.textContent = `${i+1}. ${saveHighscores[i].initals} --- ${saveHighscores[i].answerScore} Correct --- ${saveHighscores[i].timeScore} Seconds remaining`;
+	li.textContent = `${i+1}. ${storedHighscores[i].initals} --- ${storedHighscores[i].answerScore} Correct --- ${storedHighscores[i].timeScore} Seconds remaining`;
 	highscoresListEl.append( li );
 }
 
-// Event Listener clear scores
 clearScoresBtn.addEventListener( 'click', function() {
 	localStorage.clear();
 	location.reload();

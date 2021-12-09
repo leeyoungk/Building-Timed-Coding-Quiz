@@ -17,22 +17,20 @@
 </head>
 
 <body>
-    <!-- Header with link to highscores, the game's timer, and correct answer totals -->
     <header>
         <a href="./Assets/html/highscores.html">View Highscores</a>
         <div>
             <p>Correct: <span id="correctAnswers">0</span></p>
-            <p>Time: <span id="timerValue">120</span></p>
+            <p>Time: <span id="timerValue">140</span></p>
         </div>
     </header>
 
     <main class="mainPage">
 
-        <!-- The start screen of the game with instruction on gameplay -->
         <section id="startScreen">
             <h1>Coding Quiz Challenge</h1>
             <p>Try to answer the following JavaScript-related questions within the time limit. Wrong answers will
-                penalize your score/time by ten seconds! Good Luck!</p>
+                penalize your score/time by ten seconds! Lets get it !</p>
             <div class="centerContent">
                 <button id="startQuizButton">Start Quiz</button>
             </div>
@@ -40,16 +38,14 @@
 
         <div class="mainScreen">
 
-            <!-- Questions are loaded into structure -->
             <section class="hidden" id="questionScreen">
                 <h3 id="questionCountDown">12</h3>
                 <h1 id="theQuestion">The question will appear here:</h1>
                 <div id="buttonContainer">
-                    <!-- Answer buttons are generated in JS and appended here -->
+                   
                 </div>
             </section>
 
-            <!-- Game finished score with intials submission form -->
             <section class="hidden" id="finishedScreen">
                 <h1>Completed!</h1>
                 <p>Your final score is <span id="answeredCorrectScore">10</span> correct answers with <span
@@ -60,14 +56,12 @@
                     <input type="submit" id="submitInitialsButton" value="Submit">
                 </form>
             </section>
-
-            <!-- Response to answer choice -->
             <h2 class="correct hidden">Correct!</h2>
             <h2 class="wrong hidden">Wrong!</h2>
         </div>
     </main>
 
-    <!-- JavaScript links -->
+  
     <script src="./Assets/js/questions.js"></script>
     <script src="./Assets/js/script.js"></script>
 </body>
